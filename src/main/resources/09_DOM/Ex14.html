@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input::placeholder {
+            color: #ff0000;
+        }
+    </style>
+    <script>
+        function check(){
+            let infoArr = [];
+            let userId = document.getElementById("id");
+            let pw = document.getElementById("pw");
+            let name = document.getElementById("name");
+            let phone = document.getElementById("phone");
+            let addr = document.getElementById("addr");
+            infoArr.push(userId);
+            infoArr.push(pw);
+            infoArr.push(name);
+            infoArr.push(phone);
+            infoArr.push(addr);
+            let result = false;
+            for(let i=0; i<infoArr.length; i++){
+                if(infoArr[i].value == ""){
+                    infoArr[i].placeholder="빈칸을 채워주세요.";
+                    infoArr[i].placeholder.color = "red";
+                    infoArr[i].focus();
+                    result = true;
+                }
+            }
+            if(result){
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div align="cneter">
+    <form action="https://google.com" onsubmit="return check()" >
+        <table border="1">
+            <tr>
+                <td>
+                    <label for="id">아이디</label><br>
+                    <input type="text" id="id">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pw">비밀번호</label><br>
+                    <input type="text" id="pw">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">이름</label><br>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="phone">연락처</label><br>
+                    <input type="text" id="phone">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="addr">주소</label><br>
+                    <input type="text" id="addr">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <label for="sub">회원가입</label>
+                    <input type="submit" id="sub">
+                    <label for="re">회원가입</label>
+                    <input type="reset" id="re">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+
+</body>
+</html>

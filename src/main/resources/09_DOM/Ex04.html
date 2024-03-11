@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script defer>
+
+        // 태그를 만드는 방법
+        // 형식) createElement("태그이름");
+        //      createTextNode("텍스트");
+
+        // 1. 태그를 만들어 보자.
+        let h1_element = document.createElement("h1");
+        let text = document.createTextNode("DOM 안녕하세요");
+        // 텍스트 노드를 h1 태그의 자식으로 추가
+        h1_element.appendChild(text);
+        // h1 태그를 문서의 body 태그에 추가해 주어야 함.
+        document.body.appendChild(h1_element);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

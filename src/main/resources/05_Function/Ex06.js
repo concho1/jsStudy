@@ -22,5 +22,4 @@ const myAlarm = () =>{
     document.write("함수 실행 <br>");
 }
 let id = setInterval(myAlarm,  1000);
-
 setTimeout(() => clearInterval(id), 10000);

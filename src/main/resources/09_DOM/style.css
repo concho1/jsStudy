@@ -1,0 +1,44 @@
+body{
+    font-family: 굴림, serif;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none !important; /* Chrome/Safari */
+}
+
+div, p{
+    border : 2px solid lightgray;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+    padding: 10px;
+}
+
+#desc{
+    margin: 10px 20px;
+
+}
+
+p{
+    font-size:0.8rem;
+    line-height: 1.8;
+}
+
+.user{
+    color: blueviolet;
+}

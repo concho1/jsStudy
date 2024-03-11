@@ -5,6 +5,55 @@
     <title>Title</title>
 </head>
 <body>
+    <input type="button" onclick="insertStudent()" value="시작버튼">
+    <input type="button" onclick="printStudent()" value="출력버튼">
+    <div id="output">
 
+    </div>
 </body>
+<script>
+    let student;
+    function insertStudent(){
+        student = {
+            id : prompt("학생 학번 입력"),
+            name : prompt("학생 이름 입력"),
+            major : prompt("학생 학과 입력"),
+            phone : prompt("학생 전화번호 입력"),
+            /*
+            studentInfo : function (){
+                let str = `학생 학번 : ${this.id} <br> 학생 이름 : ${this.name} <br> 학생 전공 : ${this.major} <br> 학생 전화번호 : ${this.phone} <br>`;
+                return str;
+            }
+            */
+            studentInfo : () => {
+                let str = `<ul><li> 학생 학번 : ${student.id} </li><li> 학생 이름 : ${student.name} </li><li> 학생 전공 : ${student.major} </li><li> 학생 전화번호 : ${student.phone} </li></ul>`;
+                return str;
+            }
+        }
+    }
+    function printStudent() {
+        let flag = true;
+        let tm;
+        if(student != null){
+            for(s in student){
+                if(s == null || student[s] == null){
+                    flag = false;
+                    tm = s;
+                }
+            }
+        }else{
+            flag = false;
+        }
+
+        if(flag){
+            // getElementById => html 에서 id 요소를 가져와라
+            // innerHTML : id 요소 안에있는 내용을 가져와라
+            document.getElementById("output").innerHTML = student.studentInfo();
+        }else{
+            alert("학생 정보를 입력해 주세요." + tm + "이 없음");
+        }
+    }
+
+
+</script>
 </html>

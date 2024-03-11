@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+/*
+    내장 객체 : 자바스크립트에서 제공해 주고 잇는 객체
+    예) Date, Math 객체가 대표적인 내장 객체.
+
+ */
+
+let date = new Date();
+console.log(typeof date);
+
+document.write(`현재 년도 : ${date.getFullYear()} <br>`);
+document.write(`현재 월 : ${date.getMonth()+1} <br>`);
+document.write(`현재 날짜 : ${date.getDate()} <br>`);
+document.write(`현재 날짜 : ${date} <br>`);
+
+document.write("<hr>");
+
+switch (date.getDay()){
+    case 0:
+        document.write("오늘은 일요일");
+        break;
+    case 1:
+        document.write("오늘은 월요일");
+        break;
+    case 2:
+        document.write("오늘은 화요일");
+        break;
+    case 3:
+        document.write("오늘은 수요일");
+        break;
+    case 4:
+        document.write("오늘은 목요일");
+        break;
+    case 5:
+        document.write("오늘은 금요일");
+        break;
+    case 6:
+        document.write("오늘은 토요일");
+        break;
+}
+document.write("<hr>");
+
+
+</script>
+</html>
