@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!-- integrity 와 anonymous 는 디도스 동격을 막기 위해서 쓴다고 함. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<script>
+  $(document).ready(function() {
+    $("h2").css("color", "red")
+      .css("border", "1px solid blue")
+      .css("background-color", "yellow");
+  });
+</script>
+<body>
+  <h2>HEADER1</h2>
+  <h2>HEADER2</h2>
+  <h2>HEADER3</h2>
+  <h2>HEADER4</h2>
+  <h2>HEADER5</h2>
+</body>
+</html>

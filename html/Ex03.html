@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!-- integrity 와 anonymous 는 디도스 동격을 막기 위해서 쓴다고 함. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script>
+    /*
+      제이쿼리 선택자 사용 방법
+      1. 직접 선택자
+        - 전체 선택자 : $(*) ==> 모든 요소를 선택하는 선택자 아마 주석까지도?
+
+        - id 선택자 : $("#아이디 이름) ==> id 속성에 지정된 이름을 가진 요소를 선택하는 선택자.
+
+        - 요소(태그) 선택자 : $("요소명") ==> class 속성에 지정된 이름을 가진 요소를 선택하는 선택자.
+
+        - 그룹 선택자 : $("요소1, 요소2, 요소3, .... ) ==> 요소 여러개 가져오기
+     */
+    // 전체 선택자
+    $(document).ready(function() {
+      $("*").css("color", "green");
+    });
+  </script>
+</head>
+<body>
+  <h1>제이쿼리</h1>
+  <h2> 직적 선택자 및 관계 선택자</h2>
+  <h3> 직적 선택자</h3>
+  <h4> 관계 선택자</h4>
+</body>
+</html>

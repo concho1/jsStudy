@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      let size = 16;  // 최초 글자 크기
+
+      // 1. 글자모양을 클릭했을 때 이벤트 처리
+      $("#fs").change(function() {
+        $("#txt_wrap").css("fontFamily", $(this).val());
+      });
+
+      $(".zoom button").click(function (){
+        let bt_num = $(".zoom button").index(this);
+        let txt = $("#txt_wrap");
+        let font_size = $("#font_size");
+        switch (bt_num) {
+          case 0:
+            size++;
+            break;
+          case 1:
+            size = 0;
+            break;
+          case 2:
+            size--;
+            break;
+        }
+        if(size > 25 || size < 13){
+          size = 16;
+        }
+        txt.css("font-size", size+"px");
+        font_size.text(size);
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <dl>
+      <dt>글자 크기</dt>
+      <dd class="zoom">
+        <button>+</button>
+        <button>0</button>
+        <button>-</button>
+        <span id="font_size">16</span>
+      </dd>
+      <dt>글자 모양(글자체)</dt>
+      <dd>
+        <label for="fs"></label>
+        <select name="fs" id="fs">
+          <option value="dotum, '돋움', san-serif">돋움</option>
+          <option value="gulim, '굴림', san-serif">굴림</option>
+          <option value="magun gothic, '맑은고딕', san-serif">맑은고딕</option>
+          <option value="GungshChe, '궁서체', san-serif">궁서체</option>
+        </select>
+      </dd>
+    </dl>
+    <p id="txt_wrap">
+      국회는 상호원조 또는 안전보장에 관한 조약, 중요한 국제조직에 관한 조약, 우호통상항해조약, 주권의 제약에 관한 조약, 강화조약, 국가나 국민에게 중대한 재정적 부담을 지우는 조약 또는 입법사항에 관한 조약의 체결·비준에 대한 동의권을 가진다.
+
+      법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다. 모든 국민은 신체의 자유를 가진다. 누구든지 법률에 의하지 아니하고는 체포·구속·압수·수색 또는 심문을 받지 아니하며, 법률과 적법한 절차에 의하지 아니하고는 처벌·보안처분 또는 강제노역을 받지 아니한다.
+
+      대통령은 법률이 정하는 바에 의하여 훈장 기타의 영전을 수여한다. 감사원은 세입·세출의 결산을 매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다.
+
+      사회적 특수계급의 제도는 인정되지 아니하며, 어떠한 형태로도 이를 창설할 수 없다. 국가는 균형있는 국민경제의 성장 및 안정과 적정한 소득의 분배를 유지하고, 시장의 지배와 경제력의 남용을 방지하며, 경제주체간의 조화를 통한 경제의 민주화를 위하여 경제에 관한 규제와 조정을 할 수 있다.
+
+      군인은 현역을 면한 후가 아니면 국무위원으로 임명될 수 없다. 국무위원은 국정에 관하여 대통령을 보좌하며, 국무회의의 구성원으로서 국정을 심의한다.
+
+      모든 국민은 양심의 자유를 가진다. 모든 국민은 법률이 정하는 바에 의하여 납세의 의무를 진다. 국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와 행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에 감사원을 둔다.
+    </p>
+  </div>
+
+
+</body>
+</html>

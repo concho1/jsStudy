@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../js/jquery-3.7.1.js"></script>
+</head>
+<body>
+  <h2>HEADER1</h2>
+  <h2>HEADER2</h2>
+  <h2>HEADER3</h2>
+  <h2>HEADER4</h2>
+  <h2>HEADER5</h2>
+</body>
+<script>
+  /*
+    제이쿼리(jQuery)
+    - 제이쿼리는 웹 사이트에 자바스크립트를 쉽게 활용할 수 있도록 도와 주는 오픈 소스 기반의 경량의 자바스크립트 라이브러리임.
+
+    제이쿼리의 특징
+    - 웹 사이트 상에서 요소를 쉽게 찾고 조작할 수 있음.
+    - 거의 모든 웹 브라우저에 대응할 정도로 호환성이 좋음.
+    - 애니메이션 등 다양한 기능을 제공함.
+    - 유지관리가 용이한 짧은 코드 작성을 지원함.
+    - 오픈소스여서 쉽게 접근이 가능함.
+
+    제이쿼리 사용 방법
+    - 라이브러리 파일을 다운 받아서 사용하는 방법.
+    - CDN(Content Delivery Network)를 이용하여 사용하는 방법.
+   */
+
+  onload = () =>{
+    document.querySelectorAll("h2");
+  }
+  // 제이쿼리 실행 방법 - 4가지
+  // 1. jQuery(document).ready(function() { 여기에 코드 작성 });
+  // 2. jQuery(function() { 여기에 코드 작성 });
+  // 3. $(document).ready(function() { 여기에 코드 작성 });
+  // 4. $(function() { 여기에 코드 작성 });
+  // ==>  3 번이 웹 표준 코드
+
+  // 문서의 body 부분을 읽고 제이쿼리를 실행하라는 명령어.
+  $(document).ready(function () {
+    $("h2").css("color", "red");
+  });
+
+</script>
+</html>

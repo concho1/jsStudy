@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!-- integrity 와 anonymous 는 디도스 동격을 막기 위해서 쓴다고 함. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script>
+    /*
+      제이쿼리 탐색 선택자.
+      - 제이쿼리 탐색 선택자를 이용하면 직접 선택자를 이용해 선택한 요소 중
+        원하는 요소를 한 번 더 탐색해서 정확히 선택할 수 있는 장점이 있음.
+
+      - 탐색 선택자의 종류
+      - 위치 탐색 선택자
+      .first()   .last()
+      - 속성 탐색 선택자
+
+      - 콘텐츠 탐색 선택자
+
+     */
+    $(document).ready(function(){
+      let s = $("li").eq(3).text("새로운 text");
+      console.log(s);
+    });
+  </script>
+</head>
+<body>
+<h2>탐색 선택자 - 위치 탐색 선택자</h2>
+<ul class="menu">
+  <li>내용1</li>
+  <li>내용2</li>
+  <li>내용3</li>
+  <li>내용4</li>
+  <li>내용5</li>
+  <li>내용6</li>
+  <li>내용7</li>
+</ul>
+
+</body>
+</html>

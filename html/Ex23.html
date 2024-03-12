@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!-- integrity 와 anonymous 는 디도스 동격을 막기 위해서 쓴다고 함. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $("#bt1").click(function() {
+        $(".img1").fadeOut(1000);
+        $("#my").fadeOut(1000);
+      });
+      $("#bt2").click(function() {
+        $(".img1").fadeIn(1000);
+        $("#my").fadeIn(1000);
+      });
+      $("#bt3").click(function() {
+        $(".img1").fadeToggle(1000);
+        $("#my").fadeToggle(1000);
+      });
+    });
+  </script>
+</head>
+<body>
+<button id="bt1">fadeOut</button>
+<button id="bt2">fadeIn</button>
+<button id="bt3">fadeIn & out</button>
+<div id="my">
+  <ul>
+    <li>메뉴1</li>
+    <li>메뉴2</li>
+    <li>메뉴3</li>
+    <li>메뉴4</li>
+  </ul>
+</div>
+<img class="img1" src="https://images.unsplash.com/photo-1682685797208-c741d58c2eff?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0OTE2MDd8MXwxfGFsbHwxNnx8fHx8fDJ8fDE3MDkwMTIwMTF8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" alt="">
+
+</body>
+</html>

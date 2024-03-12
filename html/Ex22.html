@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!-- integrity 와 anonymous 는 디도스 동격을 막기 위해서 쓴다고 함. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function (){
+      $("#userId")
+        .on("keyup", function(key) {
+          let $message = $("#user");
+          // 엔터가 눌리면
+          if (key.keyCode === 13) {
+            let email = $(this).val();
+            let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            // 이메일 유효성 검사
+            if (regex.test(email)){
+              $message.text("Valid email address.").css('color', 'green');
+            }else{
+              $("#userId")
+                .val("")
+                .attr("placeholder", "아이디는 이메일 형식 이여야 합니다.");
+            }
+          } else {
+
+            $message.text("Invalid email address.").css('color', 'red');
+          }
+        })
+    });
+  </script>
+  <style>
+    input{
+      height: 3vh;
+      width: 30vw;
+    }
+    input::placeholder{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <label>
+    유저 아이디 :
+    <input type="text" id="userId" placeholder="">
+  </label>
+  <div id="user"></div>
+</body>
+</html>
